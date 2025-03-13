@@ -25,19 +25,24 @@ public class GuessTheNumber {
         while(true){
             try{
                 int userInt = scanner.nextInt();
+                if (userInt==-1){
+                    System.out.println("Exiting game....The number was..."+ number);
+                    break;
+                }
+                if (userInt==number){
+                    break;
+                }
+
                 if (number!=userInt){
                     if(checkHigher(userInt, number)){
                         System.out.println("number is higher than required, enter again");
                     }
                     else {
-                        System.out.println("number is lower than requireed, enter again");
+                        System.out.println("number is lower than required, enter again");
                     }
                 }
-                if (userInt==-1){
-                    System.out.println("Exiting game....The number was..."+ number);
-                    break;
-                }
-                else{break;}
+
+
 
 
             } catch (Exception e) {
