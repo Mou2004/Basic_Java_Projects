@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TempConverterGUI {
-    //For the GUI version, use JTextField for input and JLabel for the result.
+    //For the GUI version, use JTextField for input and JLabel for the result..
     //remaining-- implement logic to handle invalid user input in textfield- try catch in action perfomed when defining temp float
         private JFrame frame;
         private JTextField textField;
