@@ -46,7 +46,7 @@ public class calculatorTerminal {
 
             }
             catch (NumberFormatException e) {
-                System.out.println("Error: Invalid number input! Please enter valid numbers.");
+                System.out.println("Error: Invalid number input! Please enter valid numbers...");
                 scanner.nextLine(); // Clear invalid input
             }
             catch (Exception e){
