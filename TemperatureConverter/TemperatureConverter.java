@@ -40,7 +40,7 @@ public class TemperatureConverter {
                     case 2:
                         System.out.println("Enter temp in F");
                         float userF = scanner.nextFloat();
-                        float resultinC = (float) ((float) ((userF-32)+(5.0)/9.0) );
+                        float resultinC = (float) ((float) ((userF-32)*(5.0)/9.0) );
                         
                         System.out.println("Temp " +
                                 userF +"F in C is: "+ resultinC);
