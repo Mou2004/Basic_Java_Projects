@@ -1,5 +1,3 @@
-import game.Piece;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -71,22 +69,22 @@ public class GUI {
     }
 
 
-private void movePiece(int row, int col) {
-    // Ensure the destination is empty
-    if (buttons[row][col].getIcon() == null) {
-        // Move the piece
-        buttons[row][col].setIcon(selectedPiece);
-        buttons[selectedRow][selectedCol].setIcon(null);
+    private void movePiece(int row, int col) {
+        // Ensure the destination is empty
+        if (buttons[row][col].getIcon() == null) {
+            // Move the piece
+            buttons[row][col].setIcon(selectedPiece);
+            buttons[selectedRow][selectedCol].setIcon(null);
+        }
+
+        // Reset selection
+        buttons[selectedRow][selectedCol].setBackground((selectedRow + selectedCol) % 2 == 0 ? Color.LIGHT_GRAY : Color.DARK_GRAY);
+        selectedPiece = null;
+        selectedRow = -1;
+        selectedCol = -1;
     }
 
-    // Reset selection
-    buttons[selectedRow][selectedCol].setBackground((selectedRow + selectedCol) % 2 == 0 ? Color.LIGHT_GRAY : Color.DARK_GRAY);
-    selectedPiece = null;
-    selectedRow = -1;
-    selectedCol = -1;
-}
-
-public void setBoard(int i, int j, JButton button) {
+    public void setBoard(int i, int j, JButton button) {
         //setting up the colours of the board in alternate squares
         if ((i + j) % 2 == 0) {
             button.setBackground(Color.LIGHT_GRAY);
@@ -129,46 +127,46 @@ public void setBoard(int i, int j, JButton button) {
         }
 
         if(i == 1) {
-                button.setIcon(blackPawn);
-            }
-       if (i == 6) {
+            button.setIcon(blackPawn);
+        }
+        if (i == 6) {
             button.setIcon(whitePawn);
         }
-       //setting up piece icons in the last row
+        //setting up piece icons in the last row
 
-       if (i == 7) {
-                switch (j) {
-                    case 0:
-                        button.setIcon(whiteRook);
-                        break;
-                    case 1:
-                        button.setIcon(whiteKnight);
-                        break;
-                    case 2:
-                        button.setIcon(whiteBishop);
-                        break;
-                    case 3:
-                        button.setIcon(whiteQueen);
-                        break;
-                    case 4:
-                        button.setIcon(whiteKing);
-                        break;
-                    case 5:
-                        button.setIcon(whiteBishop);
-                        break;
-                    case 6:
-                        button.setIcon(whiteKnight);
-                        break;
-                    case 7:
-                        button.setIcon(whiteRook);
-                        break;
-                }
-
+        if (i == 7) {
+            switch (j) {
+                case 0:
+                    button.setIcon(whiteRook);
+                    break;
+                case 1:
+                    button.setIcon(whiteKnight);
+                    break;
+                case 2:
+                    button.setIcon(whiteBishop);
+                    break;
+                case 3:
+                    button.setIcon(whiteQueen);
+                    break;
+                case 4:
+                    button.setIcon(whiteKing);
+                    break;
+                case 5:
+                    button.setIcon(whiteBishop);
+                    break;
+                case 6:
+                    button.setIcon(whiteKnight);
+                    break;
+                case 7:
+                    button.setIcon(whiteRook);
+                    break;
             }
 
-
-
         }
+
+
+
+    }
 
     public void setIndex(int i, int j, JButton button){
         List<String> alphabets = Arrays.asList("a", "b", "c", "d", "e", "f", "g", "h");//for identifying chess-board index

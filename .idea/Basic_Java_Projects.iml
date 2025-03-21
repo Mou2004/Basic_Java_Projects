@@ -3,8 +3,14 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TicTacToe" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Chess/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Chess/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GuessTheNumber" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TemperatureConverter" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tic_Tac_Toe" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ToDoList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/calculator" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/TicTacToe" />
     <orderEntry type="inheritedJdk" />
